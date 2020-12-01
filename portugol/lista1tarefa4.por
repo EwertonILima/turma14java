@@ -3,7 +3,7 @@ programa
 	inclua biblioteca Matematica
 
 	funcao inicio(){
-		inteiro a, b, c, r, s
+		inteiro a, b, c
 		
 		escreva("Insira o primeiro numero: ")
 		leia(a)
@@ -20,7 +20,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 280; 
+ * @POSICAO-CURSOR = 360; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
