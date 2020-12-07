@@ -1,6 +1,7 @@
+package lista1;
 import java.util.Scanner;
 
-public class Lista1Tarefa3 {
+public class Tarefa3 {
 
 	public static void main(String[] args) {
 		
@@ -12,8 +13,11 @@ public class Lista1Tarefa3 {
 		tempoSegundos = leia.nextInt();
 		System.out.println();
 		
-		System.out.println("O tempo do evento é: " + (tempoSegundos / 3600) + " hora(s), " + (tempoSegundos / 60 % 60) + " minuto(s), " + (tempoSegundos % 60)  + " segundo(s)");
-		
+		System.out.println("O tempo do evento é: " + 
+		(tempoSegundos / 3600) + " hora(s), " + 
+		(tempoSegundos / 60 % 60) + " minuto(s), " + 
+		(tempoSegundos % 60)  + " segundo(s)");
+	
 		
 		leia.close();
 	}

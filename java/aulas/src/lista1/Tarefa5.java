@@ -1,6 +1,7 @@
+package lista1;
 import java.util.Scanner;
 
-public class Lista1Tarefa5 {
+public class Tarefa5 {
 
 	public static void main(String[] args) {
 		
