@@ -10,9 +10,9 @@ programa
 		para(inteiro l = 0; l <=2; l++){
 			para(inteiro c = 0; c <= 2; c++){
 				escreva("[",matriz3x3[l][c] = Util.sorteia(1,9),"]"," ")
-				somaTotal = somaTotal + matriz3x3[l][c]
+				somaTotal += matriz3x3[l][c]
 				se (l == c) {
-				somaDiagonal = somaDiagonal + matriz3x3[l][c]
+				somaDiagonal += matriz3x3[l][c]
 				}
 			}
 		pulaLinha()
@@ -33,7 +33,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 275; 
+ * @POSICAO-CURSOR = 301; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

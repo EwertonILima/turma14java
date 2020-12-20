@@ -7,12 +7,14 @@ programa
 		inteiro totalNumeros = 0
 		real mediaNumeros = 0.0
 
-		enquanto (contador > 0) {
+		enquanto (contador >= 0) {
 			escreva("Insira um numero:")
 			leia(contador)
-			somaContador = somaContador + contador
-			totalNumeros = totalNumeros++
-			mediaNumeros = somaContador / totalNumeros
+			se(contador >=0){
+				somaContador = somaContador + contador
+				totalNumeros = totalNumeros++
+				mediaNumeros = somaContador / totalNumeros
+			}
 		}
 		escreva("A soma dos numeros é " + somaContador + ",a média " + mediaNumeros + ", e o total de valores: " + totalNumeros)
 	}
@@ -23,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 287; 
+ * @POSICAO-CURSOR = 316; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -11,19 +11,19 @@ programa
 		se (numero > 0) {
 			status = "POSITIVO!"
 			se (numero % 2 == 0) {
-			escreva("\nO número " + numero + " é PAR e é " + status)
+				escreva("\nO número " + numero + " é PAR e é " + status)
 			}
 			senao {
-			escreva("\nO número " + numero + " é IMPAR e é " + status)
+				escreva("\nO número " + numero + " é IMPAR e é " + status)
 			}
 		}
 		senao se (numero < 0) {
-			status = "NEGATIVO!"
+				status = "NEGATIVO!"
 			se (numero % 2 == 0) {
-			escreva("\nO número " + numero + " é PAR e é " + status)
+				escreva("\nO número " + numero + " é PAR e é " + status)
 			}
 			senao {
-			escreva("\nO número " + numero + " é IMPAR e é " + status)
+				escreva("\nO número " + numero + " é IMPAR e é " + status)
 			}
 		}
 		senao {
@@ -36,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 580; 
+ * @POSICAO-CURSOR = 492; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

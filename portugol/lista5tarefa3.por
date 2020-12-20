@@ -13,13 +13,13 @@ programa
 			se(numero > 0 e numero <= 25){
 				numero0a25 += 1
 			}
-			senao se(numero > 25 e numero <= 50){
+			senao se(numero <= 50){
 				numero26a50 += 1
 			}
-			senao se(numero > 50 e numero <= 75){
+			senao se(numero <= 75){
 				numero51a75 += 1
 			}
-			senao se(numero > 75 e numero <= 100){
+			senao se(numero <= 100){
 				numero76a100 += 1
 			}
 			senao{
@@ -62,7 +62,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 162; 
+ * @POSICAO-CURSOR = 305; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
