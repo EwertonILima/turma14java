@@ -165,7 +165,7 @@ public class CadLojaPOO {
 										
 										for (Produto venda: listaProdutos) {
 											if(venda.getCodigo().equals(escolhaCodigo)) {
-												System.out.printf("%s\t\t%.2f\t\t   %d\t\t %s\n",venda.getCodigo(), venda.getPrecoUnitario() * escolhaQuantidade, escolhaQuantidade,venda.getProduto());
+												System.out.printf("%s\t\t%.2f\t\t   %d\t\t %s\n",venda.getCodigo(), venda.getPrecoUnitario(), escolhaQuantidade,venda.getProduto());
 											}
 											
 										}
@@ -313,10 +313,16 @@ public class CadLojaPOO {
 						inseriLinha(80, '▬');
 						System.out.println("\t\t\tLista de Clientes:");
 						inseriLinha(80, '▬');
-						for(Cliente x : listaClientes) {
-							System.out.println(x);
-						}
+						System.out.println("NOME\t\t\tGENERO\t\tANO DE NASCIMENTO\tCPF");
+						inseriLinha(80, '▬');
 						
+						if(listaClientes.isEmpty()) {
+							System.out.println();
+							System.out.println("Lista vazia...");
+						}
+						for(Cliente cliente : listaClientes) {
+							System.out.printf("%s\t %c\t\t %d\t\t\t%s\n",cliente.getNome(),cliente.getGenero(),cliente.getAnoNascimento(),cliente.getCpf());
+						}
 					}
 					else if (opcaoMenuCompra == '4') {
 						break;
