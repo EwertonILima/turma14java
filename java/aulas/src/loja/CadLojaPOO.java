@@ -1,6 +1,9 @@
 package loja;
 
 import java.util.Scanner;
+
+import lista8.Estoque;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -366,16 +369,34 @@ public class CadLojaPOO {
 						System.out.println();
 						System.out.println();
 						System.out.println();
-						System.out.print("Insira o nome do produto: ");
+						char continua =  ' ';
 						leia.nextLine();
-						nomeProduto = leia.nextLine();
+						do {
+							System.out.print("Insira o nome do Produto: ");
+							nomeProduto = leia.nextLine().toUpperCase();
+							for(Produto nomeProd: listaProdutos) {
+								
+							     if(nomeProd.getProduto().equals(nomeProduto)){
+							    	System.out.println();
+									inseriLinha(80,'▼');
+									System.out.println("Esse Produto ja se encontra no Estoque");
+									inseriLinha(80,'▼');
+									System.out.println();
+									break;
+							     }
+							     else {
+							    	continua = 'S';
+							     }
+							    
+							}
+						}while(continua != 'S');
 						System.out.print("Insira o valor do produto: ");
 						valorProduto = leia.nextDouble();
 						System.out.print("Insira a quantidade do produto: ");
 						qtdEstoque = leia.nextInt();
 						
 						
-						listaProdutos.add(new Produto((listaProdutos.size() >= 100)? "CLE-"+ (listaProdutos.size() + 1) : (listaProdutos.size() < 10)? "CLE-00"+ (listaProdutos.size() + 1): "CLE-0"+ (listaProdutos.size() + 1) , nomeProduto, valorProduto, qtdEstoque));
+						listaProdutos.add(new Produto((listaProdutos.size() >= 9)? "CLE-0"+ (listaProdutos.size() + 1) : "CLE-00" + (listaProdutos.size() + 1) , nomeProduto, valorProduto, qtdEstoque));
 						
 					}
 					else if(opcaoMenuEstoque == '2') {
@@ -384,16 +405,19 @@ public class CadLojaPOO {
 						for(Produto prod: listaProdutos) {
 							
 						     if(prod.getCodigo().equals(escolhaCodigo)){
-						            
-
-						            // Remove.
+						     
 						            listaProdutos.remove(prod);
-
-						            // Sai do loop.
 						            break;
-						     }
-						    
+						     } 
 						}
+						
+						int x = 1;
+						for(Produto update: listaProdutos) {
+							
+							update.setCodigo((listaProdutos.size() <= 9) ? "CLE-00" + x++ : (listaProdutos.size() >= 10)? "CLE-0" + x++ : "CLE-" + x++);
+						}
+						
+						
 					}
 					else if(opcaoMenuEstoque == '3') {
 						System.out.println("Insira o codigo do item que deseja atualizar: ");

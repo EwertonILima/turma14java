@@ -61,16 +61,35 @@ public class Tarefa3 {
 				System.out.println();
 				System.out.println();
 				System.out.println();
-				System.out.print("Insira o nome do Produto: ");
+				char continua =  ' ';
 				leia.nextLine();
-				nomeProduto = leia.nextLine();
+				do {
+					System.out.print("Insira o nome do Produto: ");
+					nomeProduto = leia.nextLine().toUpperCase();
+					for(Estoque nomeProd: listaEstoque) {
+						
+					     if(nomeProd.getProduto().equals(nomeProduto)){
+					    	System.out.println();
+							inseriLinha(80,'▼');
+							System.out.println("Esse Produto ja se encontra no Estoque");
+							inseriLinha(80,'▼');
+							System.out.println();
+					        break;
+					     }
+					     else {
+					    	 continua = 'S';
+					     }
+					    
+					}
+				}while(continua != 'S');
+				
 				System.out.print("Insira o valor do Produto: ");
 				valorProduto = leia.nextDouble();
 				System.out.print("Insira a quantidade do Produto: ");
 				qtdProduto = leia.nextInt();
 				
 				
-				listaEstoque.add(new Estoque((listaEstoque.size() >= 100)? "CLE-"+ (listaEstoque.size() + 1) : (listaEstoque.size() < 10)? "CLE-00"+ (listaEstoque.size() + 1): "CLE-0"+ (listaEstoque.size() + 1) , nomeProduto, valorProduto, qtdProduto));
+				listaEstoque.add(new Estoque((listaEstoque.size() >= 9)? "CLE-0"+ (listaEstoque.size() + 1) : "CLE-00" + (listaEstoque.size() + 1) , nomeProduto, valorProduto, qtdProduto));
 				
 			}
 			else if(opcaoMenuEstoque == '2') {
@@ -79,16 +98,22 @@ public class Tarefa3 {
 				for(Estoque prod: listaEstoque) {
 					
 				     if(prod.getCodigo().equals(escolhaCodigo)){
-				            
-
-				            // Remove.
+				       
 				            listaEstoque.remove(prod);
 
-				            // Sai do loop.
 				            break;
 				     }
 				    
 				}
+				int x = 1;
+				for(Estoque update: listaEstoque) {
+					
+					update.setCodigo((listaEstoque.size() <= 9) ? "CLE-00" + x++ : (listaEstoque.size() >= 10)? "CLE-0" + x++ : "CLE-" + x++);
+				}
+				
+				
+				
+				
 			}
 			else if(opcaoMenuEstoque == '3') {
 				System.out.println("Insira o codigo do item que deseja atualizar: ");
